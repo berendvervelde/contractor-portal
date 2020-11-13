@@ -1,0 +1,19 @@
+<div class="filter-container">
+
+    <form [formGroup]="filterForm" (ngSubmit)="updateFilter()">
+        <mat-form-field >
+            <mat-label>Status</mat-label>
+            <input formControlName="status" matInput >
+        </mat-form-field>
+<br />
+        <mat-form-field appearance="fill">
+            <mat-label>Einddatum:</mat-label>
+            <input formControlName="finishDate" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <button type="submit" mat-button color="primary">Submit</button>
+    </form>
+        
+</div>
